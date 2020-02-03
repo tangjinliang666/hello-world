@@ -1,0 +1,45 @@
+def							编写函数
+return							返回函数值
+							def 函数（xxxx....）
+								return(xxx...)
+										
+							print(函数（xxxxx）)
+
+
+形参：是指函数中定义变量的名称
+实参：传递进函数中的变量
+.__doc__						访问函数中的形参
+*							收集参数
+							def xxx(*xxx)
+								print("xxxxxx",len(xxx));
+								print("xxxxx",xxx[n]);
+										
+局部变量：在函数中定义的变量超出函数运算后不会访问到那个变量，作用域只是在函数内部
+全局变量：函数外部定义的变量，作用域是运用于全部程序的
+
+global关键字						把函数中的局部变量转换为全局变量
+							global xxx
+nonlocal						强制声明变量不是局部变量
+							nonlocal xxx
+lambda							匿名函数
+							ds() lambda x :2 * x + 1  意思和 def ds(x)
+											return 2 * x + 1 一样
+lambda函数特点比较精简，只需要在函数前为其命名
+
+filter(x,y)						filter筛选函数，x:功能函数，为y提供筛选条件
+									y:筛选对象，以x为条件筛选y中的对象
+							list(filter(lambda x : x % 2, range(10)))
+
+
+map(x,y)								x:功能函数，为y提供运行条件
+									y:筛选对象，以x为条件提供y中的对象
+							list(map(lambda x : x * 2, range(10)))
+
+
+
+递归							函数的循环
+							def xxx()
+								return xxx()		无限递归
+
+设置递归深度						import sys
+								sys.setxxxlimit(n)

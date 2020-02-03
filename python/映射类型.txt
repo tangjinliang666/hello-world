@@ -1,0 +1,36 @@
+字典：
+字典中没有顺序
+
+xxx = {‘a’：‘b’}			创建一个字典    a是键b是值ab合起来就是一个项
+
+xxx.fromkeys(x,y,z),'number')		创建一个字典	xyz是键number是每个键后面对应的值
+
+xxx.keys()				访问xxx字典中的每个键
+
+xxx.value()				访问xxx字典中的每个值
+
+xxx.items()				访问xxx字典中的每个项
+
+xxx.get()				访问字典中的键，要是没有键则输出None
+
+xxx.clear()				清空一个字典
+
+xxx.copy()				创建一个完全相同的字典
+
+xxx.pop(n)				弹出并打印字典中的第n个键
+
+xxx.popitem()				随机弹出并打印字典中的项
+
+xxx.setdefault('abc')			在字典中添加一个键，后面对应的值是None
+xxx.setdefault(a，'abc')		在字典中添加一个a键，后面对应的值是abc
+
+xxx.update(yyy)				把yyy字典中的项添加到xxx字典中
+
+
+
+集合：
+集合中所有元素都是唯一的，会把重复的元素去除，集合中的元素是无序的
+创建集合：1、用{}把元素括起来
+	  2、用set（）函数
+
+xxx = frozenset()			冻结集合，不能对集合进行编辑

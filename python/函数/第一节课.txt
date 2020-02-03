@@ -1,0 +1,48 @@
+Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> def Myfirstfuction():
+	print("刚开始学习python很激动")
+
+	
+>>> Myfirstfuction
+<function Myfirstfuction at 0x00000000030A8488>
+>>> Myfirstfuction()
+刚开始学习python很激动
+>>> def Mysecondfuction(name):
+	print(name + "我爱你")
+
+	
+>>> Mysecondfuction(某某)
+Traceback (most recent call last):
+  File "<pyshell#8>", line 1, in <module>
+    Mysecondfuction(某某)
+NameError: name '某某' is not defined
+>>> Mysecondfuction("某某")
+某某我爱你
+>>> 
+def add（num1 + num2）:
+	
+SyntaxError: invalid character in identifier
+>>> def add（num1 , num2）:
+	
+SyntaxError: invalid character in identifier
+>>> def add（num1,num2）:
+	
+SyntaxError: invalid character in identifier
+>>> def add(xx1,xx2):
+	result = xx1 + xx2
+	print(result)
+
+	
+>>> add(100,201)
+301
+>>> 
+>>> 
+>>> def add1(xxx1,xxx2):
+	return (xxx1 + xxx2)
+
+>>> print(2,4)
+2 4
+>>> print(add1(2,5))
+7
+>>> 

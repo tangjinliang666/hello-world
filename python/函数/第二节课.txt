@@ -1,0 +1,49 @@
+﻿Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> def ComeOn(name,words):
+    print("name" + "say" + "words")
+
+    
+>>> 
+>>> ComeOn("我"，"爱你")
+SyntaxError: invalid character in identifier
+>>> ComeOn("我","爱你")
+namesaywords
+>>> def ComeOn("name","words"):
+    print("name" + "say" + "words")
+
+  
+SyntaxError: invalid syntax
+>>> def ComeOn("name","words"):
+    print("name" + "say" + "words")
+    
+SyntaxError: invalid syntax
+>>> def ComeOn(name,words):
+    print("name" + "say" + "words")
+
+    
+>>> ComeOn("我","爱你")
+namesaywords
+>>> def ComeOn(name,words):
+    print(name + "say" + words)
+
+    
+>>> ComeOn("我","爱你")
+我say爱你
+>>> def ComeOn(name,words):
+    print(name + "say" + words)
+
+    
+>>> ComeOn(words='爱你',name='我')
+我say爱你
+>>> def tset(*abcdefg)
+SyntaxError: invalid syntax
+>>> def tset(*abcdefg):
+	print('参数的长度是',len(abcdefg))
+	print('第二个参数是',abcdefg[1])
+
+
+>>> tset(1,'唐金亮',4.23,4,5,6,7)
+参数的长度是 7
+第二个参数是 唐金亮
+>>> 

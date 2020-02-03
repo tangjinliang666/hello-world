@@ -1,0 +1,17 @@
+try - except语句
+
+try:
+	检测范围
+except Exception [as reason]:
+	出现异常（Exception）后的处理代码
+
+
+
+try - finally语句
+
+try:
+	检测范围
+except Exception [as reason]:
+	出现异常（Exception）后的处理代码
+finally：
+	无论程序是否出错都会被执行的代码

@@ -1,0 +1,127 @@
+变量 = x,y,z,...		元组（不可对内部元素进行修改，只可访问、创建、切片）
+float				浮点类型
+int				整形
+dir() 				函数不带参数时，返回当前范围内的变量、方法和定义的类型列表								带参数时，返回参数的属性、方法列表
+type				查看类型	type(我爱你)
+isinstance			查看类型	isinstance(1,int)
+**				幂运算		2**3=8
+%				余数运算	9%4=1
+//				地板除法	3//2=1
+and				且运算
+or				或运算
+not				非运算
+assert				false强制报错，检查程序时，插入assert非常有用
+size				计算数组和矩阵中所有数据的个数
+len				字符长度
+shape				得到矩阵每维的大小
+range（x,y,z）			range是序列语法，x表示开始数字，y表示结束数字，z表示步进
+break				跳出循环
+continue			跳出循环，从开始循环从新执行循环
+
+touple（）			把列表变成元组
+list[x,y,z,...]			列表类型
+list[x;y]			创建起始元素x到终止元素y的另一个列表，若xy不写，则拷贝列表
+append（）			列表后面添加元素	list.append(xxx)
+extend([])			列表后面添加列表	list.extend([xxx,xxx])
+insert(number,xxx)		列表中的某个位置添加元素	list.insert(1,xxx)
+remove（）			去除列表元素		list.remove(xxx)
+del				删除命令
+				删除列表第n个元素	del list(n)
+				删除整个列表		del list
+pop()				打印列表某个元素，并从列表中剔除	list.pop(xxx)
+count()				查看元素在列表中出现的次数		list.count(xxx)
+index()				查看元素在列表中第一次出现的位置	list.index(xxx)
+								list.index(xxx,x,x)
+reverse()			翻转列表中元素位置			list.reverse()
+sort()				不带参数时，对列表中元素从小到大排序	list.sort()
+				带reverse参数时从大到小排序		list.sort(reverse=True)
+				带key,func现在不讨论
+	
+str				字符串类型
+以下用的不多！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+capitalize()			把字符串首字母大写			str.capitalize()
+casefold()			把字符串中所有字符都变成小写		str.casefold()
+center(n)			把字符串居中，并将字符串长度变成n长度	str.center(n)
+count(xxx[,start[,end]])	返回xxx在字符串中出现的次数,开始位置start,结束位置end可以设置
+									str.count(xxx)
+encode				指定编码格式对字符串编码
+endswith(xxx[,start[,end]])	检查字符串是否以xxx结尾，开始位置start,结束位置end可以设置
+									str.endswith(xxx[,start[,end]])
+startswith(xxx[, start[, end]])	检查字符串是否以 xxx 开头，是则返回 True，否则返回 False。start 和 end 参数可					以指定范围检查，可选			str.startswith(prefix[, start[, end]])
+expandtabs()			把字符串中tab符号（\t）转换为空格，默认是8个
+									str.expandtabs()
+find(xxx[,start[,end]])		检测xxx是否在字符串中，在返回索引值，不在返回-1开始位置start,结								束位置end可以设置			str.find(xxx)
+index(xxx[,start[,end]])	和find类似，不过不在字符串中返回的是异常str.index(xxx)
+isalnum()			如果字符串中至少有一个字符并且所有字符都是字母或者数字返回True，否则				False					str.isalunm()
+isalpha()			如果字符串中至少有一个字符并且所有字符都是字母返回True，否则False
+									str.isalpha()
+isdecimal()			如果字符串中只包含十进制数字返回True，否则False	
+									str.isdecimal()
+isdigit()			如果字符串中只包含数字返回True，否则False	
+									str.isdigit()
+islower()			如果字符串中至少包含一个区分大小写字符并且都是小写返回True，否则False
+									str.islower()
+isnumeric()			如果字符串中只包含数字字符，则返回 True，否则返回 False
+									str.isnumeric()
+isspace()			如果字符串中只包含空格，则返回 True，否则返回 False
+									str.isspace()
+istitle()			如果字符串是标题化（所有的单词都是以大写开始，其余字母均小写），则返							回 True，否则返回 False			str.istitle()	
+isupper()			如果字符串中至少包含一个区分大小写的字符，并且这些字符都是大写，则返							回 True，否则返回 False			str.isupper()
+join(xxx)			以字符串作为分隔符，插入到 sub 中所有的字符之间
+									str.join.(xxx)
+ljust(n)			返回一个左对齐的字符串，并使用空格填充至长度为n的新字符串
+									str.ljust(n)
+lower()				转换字符串中所有大写字符为小写		str.lower()
+upper()				转换字符串中所有小写字符为大写		str.upper()
+lstrip()			去掉字符串左边的所有空格		str.lstrip()
+rstrip()			删除字符串末尾的空格			str.rstrip()	
+partition(xxx)			找到子字符串 xxx，把字符串分成一个 3 元组 (pre_xxx, xxx, fol_xxx)，如							果字符串中不包含 xxx 则返回 ('原字符串', '', '')
+									str.partition(xxx)
+replace(old, new[, count])	把字符串中的 old 子字符串替换成 new 子字符串，如果 count 指定，则替换							不超过 count 次				str.replace(old, new[,count])
+rfind(xxx[, start[, end]])	类似于 find() 方法，不过是从右边开始查找str.rfind(xxx)
+rindex(xxx[, start[, end]])	类似于 index() 方法，不过是从右边开始	str.rindex(xxx)
+rjust(n)			返回一个右对齐的字符串，并使用空格填充至长度为n的新字符串
+									str.rjust(n)
+rpartition(xxx)			类似于 partition() 方法，不过是从右边开始查找
+									str.rpartition(xxx)	
+split(sep=None, maxsplit=-1)	不带参数默认是以空格为分隔符切片字符串，如果 maxsplit 参数有设置，则							仅分隔 maxsplit 个子字符串，返回切片后的子字符串拼接的列表
+									str.split(sep=None,maxsplit=-1)
+splitlines(([keepends]))	在输出结果里是否去掉换行符，默认为 False，不包含换行符；如果为 True，则保留换行符	
+									str.splitlines(([keepends]))
+
+strip([chars])			删除字符串前边和后边所有的空格，chars 参数可以定制删除的字符，可选
+									str.strip([chars])
+swapcase()			翻转字符串中的大小写			str.swapcase()
+title()				返回标题化（所有的单词都是以大写开始，其余字母均小写）的字符串
+									str.title()	
+translate(table)		根据 table 的规则（可以由 str.maketrans('a', 'b') 定制）转换字符串中的字符
+									str.translate(table)	
+zfill(n)			返回长度为n的字符串，原字符串右对齐，前边用 0 填充
+
+
+									str.zfill(n)
+max（）				返回元组中的最大值			
+min（）				返回元组中的最小值
+sum（xxx,n）			返回xxx中所有数据的总和，n是可选的，默认为0 ，若不是0则加上n
+sorted（）			排序类似于sort				sort()
+reversed（）			倒序类似于reverse			list（reversed（xxx））
+enumerate（）			把列表中的索引值插入至元素前面，与每一个元素形成一个元组，所有元组形成一个列表
+									list(enumerate(xxx))
+zip（list1,list2）		把list1中的元素与list2中的元素一一对应打包成元组，所有元组形成一个列表
+									list(zip(list1,list2))
+
+
+转义字符含义：
+\'——————单引号
+\"——————双引号
+\a——————发出系统响铃声
+\n——————退格符
+\b——————换行符
+\t——————横向制表符（tab）
+\v——————纵向制表符
+\r——————回车符
+\f——————换页符
+\o——————八进制数代表符
+\x——————十六进制数代表符
+\0——————空字符
+\\——————反斜杠
