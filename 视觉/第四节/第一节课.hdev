@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.1" halcon_version="12.0">
+<procedure name="main">
+<interface/>
+<body>
+<l>dev_close_window ()</l>
+<l>dev_open_window (0, 0, 950,400, 'black', WindowHandle)</l>
+<l>read_image (Image1, 'C:/Users/Administrator/Desktop/现代控制技术/图片1.png')</l>
+<l>while (true)</l>
+<l>    rgb1_to_gray (Image1, GrayImage)</l>
+<l>    threshold (GrayImage, Regions, 0, 233)</l>
+<l>    connection (Regions, ConnectedRegions)</l>
+<l>    select_shape (ConnectedRegions, SelectedRegions, 'area', 'and', 6137.61, 6614.68)</l>
+<l>    area_center (SelectedRegions, Area, Row, Column)</l>
+<l>    disp_message (3600, '面积'+Area+'坐标'+Row+' '+ Column, 'window',100,100, 'green', 'true')</l>
+<l>endwhile</l>
+<c></c>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+</hdevelop>

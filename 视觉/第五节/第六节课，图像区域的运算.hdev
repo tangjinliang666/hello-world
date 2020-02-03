@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.1" halcon_version="12.0">
+<procedure name="main">
+<interface/>
+<body>
+<c>*生成区域</c>
+<l>gen_rectangle1 (Rectangle, 160, 100, 360, 400)</l>
+<l>gen_rectangle1 (Rectangle1, 160+50, 100+50, 360-50, 400-50)</l>
+<l>gen_rectangle1 (Rectangle2, 160+50, 100+50, 360+50, 400+50)</l>
+<c>*区域的做差</c>
+<l>difference (Rectangle, Rectangle1, RegionDifference)</l>
+<c>*区域的求和</c>
+<l>union2 (Rectangle2, Rectangle, RegionUnion)</l>
+<c>*把上面那两个区域变成一个区域</c>
+<l>union1 (RegionUnion, RegionUnion1)</l>
+<c>*区域的集合(把参数一区域和参数二区域放入一个集合中（参数三）)</c>
+<l>concat_obj (Rectangle, Rectangle2, ObjectsConcat)</l>
+<c>*选择集合区域</c>
+<l>select_obj (ObjectsConcat, ObjectSelected, 1)</l>
+<c>*区域的填充</c>
+<l>fill_up (RegionDifference, RegionFillUp)</l>
+<l>fill_up_shape (RegionDifference, RegionFillUp1, 'area', 1, 50)</l>
+<c>*区域骨架求取</c>
+<l>skeleton (Rectangle, Skeleton)</l>
+<c></c>
+<c></c>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+</hdevelop>

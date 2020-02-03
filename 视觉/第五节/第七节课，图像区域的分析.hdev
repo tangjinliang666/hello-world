@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.1" halcon_version="12.0">
+<procedure name="main">
+<interface/>
+<body>
+<l>dev_close_window ()</l>
+<l>dev_open_window (0, 0, 512, 512, 'black', WindowHandle)</l>
+<l>dev_set_draw ('fill')</l>
+<c></c>
+<c>*画一个区域</c>
+<l>draw_region (Region, WindowHandle)</l>
+<c>*最小外接矩形2</c>
+<l>smallest_rectangle2 (Region, Row, Column, Phi, Length1, Length2)</l>
+<l>gen_rectangle2 (Rectangle, Row, Column, Phi, Length1, Length2)</l>
+<c>*最小外接矩形1</c>
+<l>smallest_rectangle1 (Rectangle, Row1, Column1, Row2, Column2)</l>
+<l>gen_rectangle1 (Rectangle1, Row1, Column1, Row2, Column2)</l>
+<c>*凸集转换</c>
+<l>shape_trans (Region, RegionTrans, 'convex')</l>
+<c>*获取凸性值</c>
+<l>convexity (Region, Convexity)</l>
+<l>convexity (RegionTrans, Convexity1)</l>
+<c>*获取区域圆度</c>
+<l>circularity (Region, Circularity)</l>
+<c>*获取最小外接圆</c>
+<l>smallest_circle (RegionTrans, Row3, Column3, Radius)</l>
+<l>gen_circle (Circle, Row3, Column3, Radius)</l>
+<c>*区域特征</c>
+<l>region_features (Region, 'circularity', Value)</l>
+<c>*集合</c>
+<l>concat_obj (Region, Rectangle, ObjectsConcat)</l>
+<l>dev_set_draw ('margin')</l>
+<l>select_shape (ObjectsConcat, SelectedRegions, 'convexity', 'and', 0, 0.7)</l>
+<c></c>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+</hdevelop>
